@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourist Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f9fa; margin: 0; }
+    header { background: #2c3e50; padding: 1rem; color: white; }
+    .container { padding: 2rem; }
+    .card { background: white; padding: 1.5rem; margin: 1rem 0; border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    input, select, button { padding: 0.7rem; margin-top: 0.5rem; width: 100%; border-radius: 5px; border: 1px solid #ccc; }
+    button { background: #3498db; color: white; cursor: pointer; border: none; }
+    button:hover { background: #2980b9; }
+    footer { margin-top: 2rem; padding: 1rem; background: #2c3e50; color: white; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tourist Dashboard</h1>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Search Destination</h2>
+      <input type="text" id="destination" placeholder="Enter destination...">
+      <button onclick="checkClimate()">Check Climate</button>
+      <p id="climate-info"></p>
+    </div>
+
+    <div class="card">
+      <h2>Available Local Services</h2>
+      <div>
+        <h3>Ramesh's Homestay 🏡</h3>
+        <p>₹1200/night | Rating: ★★★★☆</p>
+        <button>Book Stay</button>
+      </div>
+      <div>
+        <h3>Seema's Kitchen 🍲</h3>
+        <p>₹300/person | Rating: ★★★★★</p>
+        <button>Book Food</button>
+      </div>
+      <div>
+        <h3>Arun's Taxi 🚖</h3>
+        <p>₹15/km | Rating: ★★★☆☆</p>
+        <button>Book Ride</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Booking Form</h2>
+      <input type="text" placeholder="Your Name">
+      <input type="date">
+      <select>
+        <option>Select Service</option>
+        <option>Stay</option>
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Guide</option>
+      </select>
+      <button>Confirm Booking</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tourism with Locals | SIH Project</p>
+  </footer>
+
+  <script>
+    function checkClimate(){
+      const destination = document.getElementById('destination').value;
+      if(destination){
+        document.getElementById('climate-info').innerText =
+          `Best time to visit ${destination}: October - March (Dummy Data)`;
+      } else {
+        document.getElementById('climate-info').innerText =
+          'Please enter a destination.';
+      }
+    }
+  </script>
+</body>
+</html>

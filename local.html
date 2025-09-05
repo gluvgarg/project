@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Registration</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f9fa; margin: 0; }
+    header { background: #2c3e50; padding: 1rem; color: white; }
+    .container { padding: 2rem; }
+    .card { background: white; padding: 1.5rem; margin: 1rem 0; border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    input, select, button { padding: 0.7rem; margin-top: 0.5rem; width: 100%; border-radius: 5px; border: 1px solid #ccc; }
+    button { background: #27ae60; color: white; cursor: pointer; border: none; }
+    button:hover { background: #1e8449; }
+    .badge { background: orange; color: white; padding: 0.3rem 0.6rem; border-radius: 5px; font-size: 0.9rem; }
+    footer { margin-top: 2rem; padding: 1rem; background: #2c3e50; color: white; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Local Registration</h1>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Choose Services You Provide</h2>
+      <label><input type="checkbox"> Provide Stay</label><br>
+      <label><input type="checkbox"> Provide Food</label><br>
+      <label><input type="checkbox"> Provide Transport</label><br>
+      <label><input type="checkbox"> Be a Guide</label><br>
+    </div>
+
+    <div class="card">
+      <h2>Registration Form</h2>
+      <input type="text" placeholder="Your Name">
+      <input type="text" placeholder="Location">
+      <input type="text" placeholder="Contact Info">
+      <input type="number" placeholder="Price / Charges">
+      <button>Register</button>
+      <p>Status: <span class="badge">Pending Verification (Blockchain)</span></p>
+    </div>
+
+    <div class="card">
+      <h2>Local Dashboard</h2>
+      <p><strong>Booking Request:</strong> Tourist John wants to book your Taxi on 15th Sept.</p>
+      <button>Accept</button> <button>Reject</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tourism with Locals | SIH Project</p>
+  </footer>
+</body>
+</html>
